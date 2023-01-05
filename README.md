@@ -1,3 +1,66 @@
+# before git clone...
+
+## init create-react-app local
+
+- uninstall old version ( global )
+
+```
+npm uninstall create-react-app -g
+```
+
+- download latest create-react-app if not exist, it will named react-project and use typescript as template and dependent by npm
+
+```
+npx create-react-app react-project --template typescript --use-npm
+```
+
+_if not response, try these command below to change mirror source_
+
+```
+npm config set registry https://registry.npmjs.org/
+```
+
+_show current mirror source_
+
+```
+npm config get registry
+```
+
+_if still stuck in some command_
+
+```
+npm cache clean --force
+```
+
+- initial npm
+
+```
+npm init
+```
+
+- download via npm but not npx
+
+```
+npm install create-react-app
+```
+
+- install by npx and typescript npm
+
+```
+npx create-react-app react-project --template typescript --use-npm
+```
+
+- change git remote origin 
+
+```
+git remote add origin git@github.com:Aakarshan20/react_frontend_project.git
+```
+
+- run git pull not git clone
+
+```
+git pull 
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
