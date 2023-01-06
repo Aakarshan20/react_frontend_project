@@ -12,7 +12,7 @@ export default () => {
         <Routes>
           {/* notice the order, / should be the last otherwise it will occur exception  */}
           <Route path='/login' element={<LoginPage />} />
-          <Route path='/' element={<HomePage />} />
+          <Route path='*' element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </div>

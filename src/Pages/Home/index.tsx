@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import './style.css';
-import { Button, Space } from 'antd';
+import { Button } from 'antd';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Route, Navigate, Routes } from 'react-router-dom';
 
 interface State {
   isLogin: boolean;
@@ -10,29 +10,40 @@ interface State {
 
 class Home extends Component {
   state = {
-    isLogin: true,
+    loaded: false, // need to reload
+    isLogin: true
   };
 
   componentDidMount() {
-    this.state.isLogin;
     axios.get('/api/isLogin').then((res) => {
       if (!res.data?.data) {
-        this.setState({ isLogin: false });
+        this.setState({ isLogin: false, loaded:true });
       }
     });
   }
   render() {
-    const { isLogin } = this.state;
+    const { isLogin, loaded } = this.state;
     if (isLogin) {
-      return (
-        <div className='home-page'>
-          <Button type='primary'>start crawler</Button>
-          <Button type='primary'>show data</Button>
-          <Button type='primary'>logout</Button>
-        </div>
-      );
+      if(loaded){
+        return (
+          <div className='home-page'>
+            <Button type='primary'>start crawler</Button>
+            <Button type='primary'>show data</Button>
+            <Button type='primary'>logout</Button>
+          </div>
+        );
+      }
+      return null;
     } else {
-      return <Redirect to='/login' />;
+      return (
+        // <Routes>
+        <Routes>
+        <Route
+        path="*"
+        element={<Navigate to="/login" replace />}
+        />
+        </Routes>
+      );
     }
   }
 }
