@@ -120,3 +120,9 @@ npm install antd --save
 ```
 npm install react-router-dom --save
 ```
+
+# install axiox to send ajax request
+
+```
+npm install axios --save
+```
