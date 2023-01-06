@@ -50,7 +50,7 @@ npm install create-react-app
 npx create-react-app react-project --template typescript --use-npm
 ```
 
-- change git remote origin 
+- change git remote origin
 
 ```
 git remote add origin git@github.com:Aakarshan20/react_frontend_project.git
@@ -59,8 +59,9 @@ git remote add origin git@github.com:Aakarshan20/react_frontend_project.git
 - run git pull not git clone
 
 ```
-git pull 
+git pull
 ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -108,9 +109,14 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 # ant designed
 
 ```
 npm install antd --save
+```
+
+# install react-router-dom
+
+```
+npm install react-router-dom --save
 ```
