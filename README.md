@@ -126,3 +126,9 @@ npm install react-router-dom --save
 ```
 npm install axios --save
 ```
+
+# install qa to send form page
+
+```
+npm install qs --save
+```
